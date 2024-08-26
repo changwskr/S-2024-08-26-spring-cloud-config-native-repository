@@ -1,0 +1,21 @@
+encrypt:
+  # 대칭키를 이용해서 암호화하는 경우
+  key: abcdefghijklmnopqrstuvwxyz0123456789
+
+token:
+  expiration_time: 86400000
+  # secret: '{cipher}AQA2UDLKLRGLI7E8xaHogrZMgKRjg/RN0KNq9IYhBe2UsfWCQ7jSVaysPzSJarE8Qb9I03aiT2UNatUhzrnV69V6M0SnHenX+p5iCUGtttw1rMtXE+xa+SWdi39hcjW69m9VpELV13I/3UylHq2XKuoYYPlAxCd4wlFl3kVvTHgeRcHAh/1gNrEl92NVIDGXBFd4yapq+CX7pJeIM95gUYLg6hr3rF9g7ZzIoOvjUHd6cqYpQFJuhEhjO+PDD21cTtli0Rc2SJTJlkOyIvdLQkjjkos8csd+WoZwh18hZJmv3Ddysm9rGAr8xWMjhkz3mh1Fvv3/cWlOrUFEGZkL/ZIvi+gHLJb7QJl9TwCzuqh5jGX0P5HwX++OAB901Ql9OUFvNgURprc3py1nsU/oHmYK'
+  secret: user_token_native_ecommerce
+
+gateway:
+  ip: 192.168.0.8
+
+# [2024-08-17-12,14] 데이타베이스 암호영역으로 config-server를 통해서 인젝션 받는다.
+spring:
+  datasource:
+    url: jdbc:h2:mem:h6db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: '{cipher}AQCAuQinB6Sb4UYo+doL95X0jC6Xlgtydcv0BHhqxujHsuMIg7OfRvba/bJeZMOPY3xv0FzWgZhK5WnloBf/+41wd/ByAvK0uZr6nzwsvgvm474W0Uab1xkSDJ8CxYLrYT8AUORD4kcrOivf/JHnzN4sf+8m+VZg1ASiwQacRQHVGedfZ0f9wqn1cyEZa9S6gZAC8GwbKay3s+TF1OmUlZHkfU9+akmhgNbCSBF8Jpqt6LLHZR2bC2RzbLPRsEv5/0Y5Wo0LUquf6+zElFrtLvyoBTAYWInDFnN0B1kRpoB5jWYKQ2skcqGwTwx9R6+tX5Ch8u5PYOK/qk6Stdc3r/ljvFUiKKoShnMs3qGQJY/VjxuF8ZgbfToZZN/yawHTjDc='
+    # {cipher}라는 뜻은 암호화된 데이타란 뜻이다.
+    # password: sa
